@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
   def show
   	@user = User.find(params[:id])
+  	@twitterposts = @user.twitterposts.paginate(page: params[:page], per_page: 15)
   end
 
   def create
@@ -15,6 +16,11 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def index
+  	@users = User.paginate(page: params[:page], per_page: 15)
+
   end
 
   private 

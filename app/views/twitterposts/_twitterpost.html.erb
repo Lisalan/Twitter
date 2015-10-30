@@ -1,0 +1,12 @@
+<li id="twitterpost-<%= twitterpost.id %>">
+  
+  <span class="user"><%= link_to twitterpost.user.name, twitterpost.user %></span>
+  <span class="content"><%= twitterpost.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(twitterpost.created_at) %> ago.
+    <% if current_user?(twitterpost.user) %>
+      <%= link_to "delete", twitterpost, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>

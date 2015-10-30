@@ -1,2 +1,20 @@
-<% provide(:title, @user.name) %> 
-<h1><%= @user.name %></h1>
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @user.twitterposts.any? %>
+      <h3>TwitterPosts (<%= @user.twitterposts.count %>)</h3>
+      <ol class="twitterposts">
+        <%= render @twitterposts %>
+      </ol>
+      <%= will_paginate @twitterposts %>
+    <% end %>
+  </div>
+</div>

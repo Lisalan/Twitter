@@ -2,6 +2,8 @@
 
 This is a TwitterPost application. https://twitterbyluan.herokuapp.com/
 
+* login email: "twitter@twitter.org", password: "twitter"
+
 * Enable user to sign up, login and logout.
 
 * Enable user to see the timeline.

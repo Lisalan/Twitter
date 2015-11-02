@@ -9,12 +9,9 @@
 #  updated_at :datetime         not null
 #
 
-require 'spec_helper'
-
-describe Twitterpost do
-  context 'associations and validations' do
-    it { should validate_presence_of(:user_id) }
-    it { should validate_presence_of(:content) }
-    it { should belong_to(:user) }
+FactoryGirl.define do
+  factory :twitterpost do
+    content "twitterpost"
+    user
   end
 end

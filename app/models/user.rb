@@ -37,6 +37,7 @@ class User < ActiveRecord::Base
                      WHERE  follower_id = :user_id"
     Twitterpost.where("user_id IN (#{following_ids})
                      OR user_id = :user_id", user_id: id)
+    
   end
 
   def follow(other_user)
@@ -49,6 +50,14 @@ class User < ActiveRecord::Base
 
   def following?(other_user)
     following.include?(other_user)
+  end
+
+  def self.search(search)
+    if search
+      where('name LIKE ?', "%#{search}%")
+    else
+      all
+    end
   end
 
 end

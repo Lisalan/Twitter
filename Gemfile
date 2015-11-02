@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -22,6 +23,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass', '~> 3.3.5'
 
+gem "therubyracer"
+gem "less-rails" 
+gem "twitter-bootstrap-rails", '~> 2.1'
+
 gem 'bcrypt-ruby', '3.1.2'
 gem 'bcrypt', '~> 3.1.7'
 
@@ -31,33 +36,30 @@ gem 'faker'
 
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'sqlite3'
-  gem 'rspec-rails', '2.11.0'
+  
+  gem 'rspec-rails', '3.3.2'
   gem 'annotate'
-end
 
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+
+end
 
 group :test do
-  gem 'capybara', '1.1.2'
+  gem 'capybara', '2.2.0'
+  gem "factory_girl_rails"
+  
+  gem 'guard-rspec', '4.6.0'
 end
+
 group :production do 
 	gem 'pg', '0.12.2'
 end

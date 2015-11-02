@@ -1,28 +1,15 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a TwitterPost application.
 
-Things you may want to cover:
+* Enable user to sign up, login and logout.
 
-* Ruby version
+* Enable user to see the timeline.
 
-* System dependencies
+* Enable user to post twitter.
 
-* Configuration
+* Enable user to search other users.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Enable user to following and unfollowing others.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

@@ -1,0 +1,32 @@
+<% provide(:title, 'Welcome Twitter') %> <!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %></title>
+</head>
+
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
+      <section class="twitterpost_form">
+        <%= render 'shared/twitterpost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Twitter Posts</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+	<body>
+	  <div class="center hero-unit">
+	    <h1>Welcome to Twitter</h1>    
+	    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %> </div>    
+	</body>
+	</html>
+<% end %>

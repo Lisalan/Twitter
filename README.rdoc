@@ -1,6 +1,6 @@
 == README
 
-This is a TwitterPost application.
+This is a TwitterPost application. https://twitterbyluan.herokuapp.com/
 
 * Enable user to sign up, login and logout.
 
@@ -11,5 +11,7 @@ This is a TwitterPost application.
 * Enable user to search other users.
 
 * Enable user to following and unfollowing others.
+
+
 
 
